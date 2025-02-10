@@ -56,6 +56,48 @@ class _B01PageUIState extends State<B01PageUI> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 80,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 20,
+                right: 20,
+              ),
+              child: Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 65, 6, 203),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      minimumSize: Size(200, 70),
+                    ),
+                    child: Text(
+                      'Log in',
+                      style: TextStyle(color: Colors.white, fontSize: 25),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      minimumSize: Size(200, 70),
+                    ),
+                    child: Text(
+                      'Register',
+                      style: TextStyle(color: Colors.black, fontSize: 25),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
