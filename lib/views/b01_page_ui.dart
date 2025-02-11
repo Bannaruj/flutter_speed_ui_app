@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/b02_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/b03_page_ui.dart';
 
 class B01PageUI extends StatefulWidget {
   const B01PageUI({super.key});
@@ -67,7 +69,14 @@ class _B01PageUIState extends State<B01PageUI> {
               child: Row(
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => B02PageUI(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255, 65, 6, 203),
                       shape: RoundedRectangleBorder(
@@ -83,7 +92,14 @@ class _B01PageUIState extends State<B01PageUI> {
                     width: 5,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => B03PageUI(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255, 255, 255, 255),
                       shape: RoundedRectangleBorder(

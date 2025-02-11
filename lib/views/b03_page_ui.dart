@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_ui_app/views/b03_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/b02_page_ui.dart';
 
-class B02PageUI extends StatefulWidget {
-  const B02PageUI({super.key});
+class B03PageUI extends StatefulWidget {
+  const B03PageUI({super.key});
 
   @override
-  State<B02PageUI> createState() => _B02PageUIState();
+  State<B03PageUI> createState() => _B03PageUIState();
 }
 
-class _B02PageUIState extends State<B02PageUI> {
+class _B03PageUIState extends State<B03PageUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,22 +19,22 @@ class _B02PageUIState extends State<B02PageUI> {
               height: 70,
             ),
             Text(
-              'Login here',
+              'Create account',
               style: TextStyle(
                   fontSize: 35,
                   color: Color(0xff1F41BB),
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 20,
+              height: 5,
             ),
             Text(
-              "Welcome back you've",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              "Create an account so you can explore all the",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             Text(
-              "been missed!",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              "existing jobs",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 80,
@@ -94,18 +94,28 @@ class _B02PageUIState extends State<B02PageUI> {
               height: 30,
             ),
             Padding(
-              padding: EdgeInsets.only(
-                left: 190,
+              padding: EdgeInsets.only(left: 35, right: 35),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Confirm password',
+                  hintStyle: TextStyle(
+                      color: Colors.black54, fontWeight: FontWeight.bold),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Color(0xffF1F4FF),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 25.0,
+                    horizontal: 20.0,
+                  ),
+                ),
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.left,
               ),
-              child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Forgot your Password ?',
-                    style: TextStyle(
-                        color: Color(0xff1F41BB),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
-                  )),
             ),
             SizedBox(
               height: 30,
@@ -134,12 +144,12 @@ class _B02PageUIState extends State<B02PageUI> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => B03PageUI(),
+                    builder: (context) => B02PageUI(),
                   ),
                 );
               },
               child: Text(
-                'Create new account',
+                'Already have account',
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
