@@ -54,7 +54,21 @@ class _A01PageUIState extends State<A01PageUI> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'),
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '),
                   ],
                 ),
                 SizedBox(height: 40),
@@ -62,6 +76,24 @@ class _A01PageUIState extends State<A01PageUI> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xffF89AEE),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(10.0),
+                                  bottomLeft: Radius.circular(10.0))),
+                          minimumSize: Size(
+                            MediaQuery.of(context).size.width * 0.5,
+                            MediaQuery.of(context).size.height * 0.09,
+                          ),
+                        ),
+                        child: Text(
+                          'Sign in',
+                          style: TextStyle(color: Colors.white, fontSize: 25),
+                        ),
+                      ),
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
@@ -72,27 +104,15 @@ class _A01PageUIState extends State<A01PageUI> {
                           );
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xffF89AEE),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(10.0),
-                                  bottomLeft: Radius.circular(10.0))),
-                          minimumSize: Size(200, 70),
-                        ),
-                        child: Text(
-                          'Sign in',
-                          style: TextStyle(color: Colors.white, fontSize: 25),
-                        ),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFFF3F3F3),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(10.0),
                                   bottomRight: Radius.circular(10.0))),
-                          minimumSize: Size(200, 70),
+                          minimumSize: Size(
+                            MediaQuery.of(context).size.width * 0.4,
+                            MediaQuery.of(context).size.height * 0.09,
+                          ),
                         ),
                         child: Text(
                           'Register',

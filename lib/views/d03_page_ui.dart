@@ -13,281 +13,243 @@ class _D03PageUIState extends State<D03PageUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 350, top: 20),
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 0.5,
-                  ),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: Icon(
-                    Icons.arrow_back_ios_new,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 70),
-              child: Text(
-                'Hello! Register to get',
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 280),
-              child: Text(
-                'started',
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Username',
-                  hintStyle: TextStyle(
-                      color: Color(0xff8391A1), fontWeight: FontWeight.bold),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  filled: true,
-                  fillColor: Color(0xffE8ECF4),
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: 25.0,
-                    horizontal: 20.0,
-                  ),
-                ),
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Email',
-                  hintStyle: TextStyle(
-                      color: Color(0xff8391A1), fontWeight: FontWeight.bold),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  filled: true,
-                  fillColor: Color(0xffE8ECF4),
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: 25.0,
-                    horizontal: 20.0,
-                  ),
-                ),
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Password',
-                  hintStyle: TextStyle(
-                      color: Color(0xff8391A1), fontWeight: FontWeight.bold),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  filled: true,
-                  fillColor: Color(0xffE8ECF4),
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: 25.0,
-                    horizontal: 20.0,
-                  ),
-                ),
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'COnfirm Password',
-                  hintStyle: TextStyle(
-                      color: Color(0xff8391A1), fontWeight: FontWeight.bold),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  filled: true,
-                  fillColor: Color(0xffE8ECF4),
-                  contentPadding: EdgeInsets.symmetric(
-                    vertical: 25.0,
-                    horizontal: 20.0,
-                  ),
-                ),
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.left,
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                minimumSize: Size(390, 70),
-              ),
-              child: Text(
-                'Register',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(
+                maxWidth: 400), // Limit width for larger screens
+            child: Column(
               children: [
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(),
-                    child: Divider(
-                      color: const Color(0xFFE8ECF4),
-                      thickness: 3,
-                    ),
-                  ),
-                ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Text(
-                    'Or Register With',
-                    style: TextStyle(color: Colors.black, fontSize: 17),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(),
-                    child: Divider(
-                      color: const Color(0xFFE8ECF4),
-                      thickness: 3,
+                  padding: const EdgeInsets.only(right: 350, top: 20),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back_ios_new,
+                      color: Colors.black,
                     ),
                   ),
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                    width: 100,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(7),
-                        border: Border.all(
-                          color: Color(0xFFE8ECF4),
-                        )),
-                    child: Image.asset('assets/icon/imgc3.png')),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                    width: 100,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(7),
-                        border: Border.all(color: Color(0xFFE8ECF4))),
-                    child: Image.asset('assets/icon/imgc4.png')),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                    width: 100,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(7),
-                        border: Border.all(color: Color(0xFFE8ECF4))),
-                    child: Image.asset('assets/icon/imga4.png')),
-              ],
-            ),
-            SizedBox(
-              height: 90,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Don't have an account?",
-                  style: TextStyle(
-                    fontSize: 19,
-                    color: Color(0xff6f6f6f),
+                const SizedBox(height: 40),
+                const Padding(
+                  padding: EdgeInsets.only(right: 70),
+                  child: Text(
+                    'Hello! Register to get',
+                    style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => (D02PageUI()),
-                      ),
-                    );
-                  },
+                const Padding(
+                  padding: EdgeInsets.only(right: 280),
                   child: Text(
-                    'Login now',
+                    'started',
+                    style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(height: 40),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Username',
+                    hintStyle: const TextStyle(
+                      color: Color(0xff8391A1),
+                      fontWeight: FontWeight.bold,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    filled: true,
+                    fillColor: const Color(0xffE8ECF4),
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 25.0,
+                      horizontal: 20.0,
+                    ),
+                  ),
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Email',
+                    hintStyle: const TextStyle(
+                      color: Color(0xff8391A1),
+                      fontWeight: FontWeight.bold,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    filled: true,
+                    fillColor: const Color(0xffE8ECF4),
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 25.0,
+                      horizontal: 20.0,
+                    ),
+                  ),
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    hintStyle: const TextStyle(
+                      color: Color(0xff8391A1),
+                      fontWeight: FontWeight.bold,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    filled: true,
+                    fillColor: const Color(0xffE8ECF4),
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 25.0,
+                      horizontal: 20.0,
+                    ),
+                  ),
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Confirm Password',
+                    hintStyle: const TextStyle(
+                      color: Color(0xff8391A1),
+                      fontWeight: FontWeight.bold,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    filled: true,
+                    fillColor: const Color(0xffE8ECF4),
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 25.0,
+                      horizontal: 20.0,
+                    ),
+                  ),
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+                const SizedBox(height: 30),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    minimumSize: const Size(
+                        double.infinity, 70), // Make button take full width
+                  ),
+                  child: const Text(
+                    'Register',
                     style: TextStyle(
-                      fontSize: 19,
-                      color: Color(0xff35C2C1),
+                      color: Colors.white,
+                      fontSize: 20,
                     ),
                   ),
                 ),
+                const SizedBox(height: 40),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        color: const Color(0xFFE8ECF4),
+                        thickness: 3,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Text(
+                        'Or Register With',
+                        style: TextStyle(color: Colors.black, fontSize: 17),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        color: const Color(0xFFE8ECF4),
+                        thickness: 3,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(width: 20),
+                    Container(
+                      width: 100,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(7),
+                          border: Border.all(color: const Color(0xFFE8ECF4))),
+                      child: Image.asset('assets/icon/imgc3.png'),
+                    ),
+                    const SizedBox(width: 20),
+                    Container(
+                      width: 100,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(7),
+                          border: Border.all(color: const Color(0xFFE8ECF4))),
+                      child: Image.asset('assets/icon/imgc4.png'),
+                    ),
+                    const SizedBox(width: 20),
+                    Container(
+                      width: 100,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(7),
+                          border: Border.all(color: const Color(0xFFE8ECF4))),
+                      child: Image.asset('assets/icon/imga4.png'),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 90),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Already have an account?",
+                      style: TextStyle(
+                        fontSize: 19,
+                        color: Color(0xff6f6f6f),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const D02PageUI(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Login Now',
+                        style: TextStyle(
+                          fontSize: 19,
+                          color: Color(0xff35C2C1),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );

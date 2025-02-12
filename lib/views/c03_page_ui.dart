@@ -17,21 +17,18 @@ class _C03PageUIState extends State<C03PageUI> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
+            child: SingleChildScrollView(
+      padding: EdgeInsets.symmetric(
+        horizontal: MediaQuery.of(context).size.width * 0.05,
+      ),
       child: Column(
         children: [
-          SizedBox(
-            height: 70,
-          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.08),
           Padding(
-            padding: const EdgeInsets.only(
-              left: 300,
+            padding: EdgeInsets.only(
+              left: MediaQuery.of(context).size.width * 0.6,
             ),
             child: Container(
-              child: Image.asset(
-                'assets/images/imgc2.png',
-                width: 30,
-                height: 30,
-              ),
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.green,
@@ -39,142 +36,150 @@ class _C03PageUIState extends State<C03PageUI> {
                 ),
                 borderRadius: BorderRadius.circular(15),
               ),
+              child: Image.asset(
+                'assets/images/imgc2.png',
+                width: MediaQuery.of(context).size.width * 0.07,
+                height: MediaQuery.of(context).size.width * 0.07,
+              ),
             ),
           ),
-          SizedBox(
-            height: 50,
-          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.04),
           Text(
             'Create your account',
-            style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: MediaQuery.of(context).size.width * 0.07,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          SizedBox(
-            height: 30,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 290),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+          Align(
+            alignment: Alignment.centerLeft,
             child: Text(
               'Name',
-              style: TextStyle(color: Color(0xff6F6F6F), fontSize: 18),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 35, right: 35),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'ex: jon.smith',
-                hintStyle: TextStyle(
-                    color: Color.fromARGB(255, 182, 182, 182), fontSize: 20),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide.none,
-                ),
-                filled: true,
-                fillColor: Color(0xffFAFAFA),
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 25.0,
-                  horizontal: 20.0,
-                ),
-              ),
               style: TextStyle(
-                color: Colors.black,
+                color: Color(0xff6F6F6F),
+                fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
-              textAlign: TextAlign.left,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 280),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'ex: jon.smith',
+              hintStyle: TextStyle(
+                color: Color.fromARGB(255, 182, 182, 182),
+                fontSize: MediaQuery.of(context).size.width * 0.04,
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide.none,
+              ),
+              filled: true,
+              fillColor: Color(0xffFAFAFA),
+              contentPadding: EdgeInsets.symmetric(
+                vertical: MediaQuery.of(context).size.height * 0.03,
+                horizontal: MediaQuery.of(context).size.width * 0.04,
+              ),
+            ),
+            style: TextStyle(color: Colors.black),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+          Align(
+            alignment: Alignment.centerLeft,
             child: Text(
               'Email',
-              style: TextStyle(color: Color(0xff6F6F6F), fontSize: 20),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 35, right: 35),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'ex: jon.smith@email.com',
-                hintStyle: TextStyle(
-                    color: Color.fromARGB(255, 182, 182, 182), fontSize: 18),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide.none,
-                ),
-                filled: true,
-                fillColor: Color(0xffFAFAFA),
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 25.0,
-                  horizontal: 20.0,
-                ),
-              ),
               style: TextStyle(
-                color: Colors.black,
+                color: Color(0xff6F6F6F),
+                fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
-              textAlign: TextAlign.left,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 250),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'ex: jon.smith@email.com',
+              hintStyle: TextStyle(
+                color: Color.fromARGB(255, 182, 182, 182),
+                fontSize: MediaQuery.of(context).size.width * 0.04,
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide.none,
+              ),
+              filled: true,
+              fillColor: Color(0xffFAFAFA),
+              contentPadding: EdgeInsets.symmetric(
+                vertical: MediaQuery.of(context).size.height * 0.03,
+                horizontal: MediaQuery.of(context).size.width * 0.04,
+              ),
+            ),
+            style: TextStyle(color: Colors.black),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+          Align(
+            alignment: Alignment.centerLeft,
             child: Text(
               'Password',
-              style: TextStyle(color: Color(0xff6F6F6F), fontSize: 18),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 35, right: 35),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: '•••••••••',
-                hintStyle: TextStyle(
-                    color: Color.fromARGB(255, 182, 182, 182), fontSize: 20),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide.none,
-                ),
-                filled: true,
-                fillColor: Color(0xffFAFAFA),
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 25.0,
-                  horizontal: 20.0,
-                ),
-              ),
               style: TextStyle(
-                color: Colors.black,
+                color: Color(0xff6F6F6F),
+                fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
-              textAlign: TextAlign.left,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 180),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+          TextField(
+            decoration: InputDecoration(
+              hintText: '•••••••••',
+              hintStyle: TextStyle(
+                color: Color.fromARGB(255, 182, 182, 182),
+                fontSize: MediaQuery.of(context).size.width * 0.04,
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide.none,
+              ),
+              filled: true,
+              fillColor: Color(0xffFAFAFA),
+              contentPadding: EdgeInsets.symmetric(
+                vertical: MediaQuery.of(context).size.height * 0.03,
+                horizontal: MediaQuery.of(context).size.width * 0.04,
+              ),
+            ),
+            style: TextStyle(color: Colors.black),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+          Align(
+            alignment: Alignment.centerLeft,
             child: Text(
               'Confirm Password',
-              style: TextStyle(color: Color(0xff6F6F6F), fontSize: 18),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 35, right: 35),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: '•••••••••',
-                hintStyle: TextStyle(
-                    color: Color.fromARGB(255, 182, 182, 182), fontSize: 20),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide.none,
-                ),
-                filled: true,
-                fillColor: Color(0xffFAFAFA),
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 25.0,
-                  horizontal: 20.0,
-                ),
-              ),
               style: TextStyle(
-                color: Colors.black,
+                color: Color(0xff6F6F6F),
+                fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
-              textAlign: TextAlign.left,
             ),
           ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+          TextField(
+            decoration: InputDecoration(
+              hintText: '•••••••••',
+              hintStyle: TextStyle(
+                color: Color.fromARGB(255, 182, 182, 182),
+                fontSize: MediaQuery.of(context).size.width * 0.04,
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide.none,
+              ),
+              filled: true,
+              fillColor: Color(0xffFAFAFA),
+              contentPadding: EdgeInsets.symmetric(
+                vertical: MediaQuery.of(context).size.height * 0.03,
+                horizontal: MediaQuery.of(context).size.width * 0.04,
+              ),
+            ),
+            style: TextStyle(color: Colors.black),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -185,32 +190,37 @@ class _C03PageUIState extends State<C03PageUI> {
                     _isChecked = newValue!;
                   });
                 },
+                activeColor: Color(0xff00B140),
               ),
               Text("I understood the "),
               TextButton(
-                  onPressed: () {},
-                  child: Text('term & pilicy.',
-                      style: TextStyle(
-                        color: Color(0xff00B140),
-                      ))),
+                onPressed: () {},
+                child: Text(
+                  'terms & policy.',
+                  style: TextStyle(
+                    color: Color(0xff00B140),
+                  ),
+                ),
+              ),
             ],
           ),
-          SizedBox(
-            height: 10,
-          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
           ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xff00B140),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
-              minimumSize: Size(365, 55),
+              minimumSize: Size(
+                MediaQuery.of(context).size.width * 0.9,
+                MediaQuery.of(context).size.height * 0.07,
+              ),
             ),
             child: Text(
               'SIGN UP',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 17,
+                fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
             ),
           ),
@@ -296,6 +306,6 @@ class _C03PageUIState extends State<C03PageUI> {
           ),
         ],
       ),
-    ));
+    )));
   }
 }

@@ -15,256 +15,226 @@ class _D02PageUIState extends State<D02PageUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 350, top: 20),
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 0.5,
-                  ),
-                  borderRadius: BorderRadius.circular(10),
-                ),
+        child: SingleChildScrollView(
+          // Added for scrollability
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 350, top: 20),
                 child: IconButton(
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back_ios_new,
                     color: Colors.black,
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 70),
-              child: Text(
-                'Welcome back! Glad',
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+              const SizedBox(height: 40),
+              const Padding(
+                padding: EdgeInsets.only(right: 70),
+                child: Text(
+                  'Welcome back! Glad',
+                  style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 99),
-              child: Text(
-                'to see you, Again!',
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+              const Padding(
+                padding: EdgeInsets.only(right: 99),
+                child: Text(
+                  'to see you, Again!',
+                  style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: TextField(
+              const SizedBox(height: 40),
+              TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter your Email',
-                  hintStyle: TextStyle(
-                      color: Color(0xff8391A1), fontWeight: FontWeight.bold),
+                  hintStyle: const TextStyle(
+                    color: Color(0xff8391A1),
+                    fontWeight: FontWeight.bold,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: BorderSide.none,
                   ),
                   filled: true,
-                  fillColor: Color(0xffE8ECF4),
-                  contentPadding: EdgeInsets.symmetric(
+                  fillColor: const Color(0xffE8ECF4),
+                  contentPadding: const EdgeInsets.symmetric(
                     vertical: 25.0,
                     horizontal: 20.0,
                   ),
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black,
                 ),
-                textAlign: TextAlign.left,
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: TextField(
+              const SizedBox(height: 20),
+              TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter your Password',
-                  hintStyle: TextStyle(
-                      color: Color(0xff8391A1), fontWeight: FontWeight.bold),
+                  hintStyle: const TextStyle(
+                    color: Color(0xff8391A1),
+                    fontWeight: FontWeight.bold,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: BorderSide.none,
                   ),
                   filled: true,
-                  fillColor: Color(0xffE8ECF4),
-                  contentPadding: EdgeInsets.symmetric(
+                  fillColor: const Color(0xffE8ECF4),
+                  contentPadding: const EdgeInsets.symmetric(
                     vertical: 25.0,
                     horizontal: 20.0,
                   ),
-                  suffixIcon: Icon(
+                  suffixIcon: const Icon(
                     FontAwesomeIcons.eye,
                     color: Color(0xff8391A1),
                   ),
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black,
                 ),
-                textAlign: TextAlign.left,
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 220,
-              ),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => (D04PageUI()),
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 220),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const D04PageUI(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                      fontSize: 17,
+                      color: Color(0xff6A707C),
                     ),
-                  );
-                },
-                child: Text(
-                  'Forgot Password?',
+                  ),
+                ),
+              ),
+              const SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  minimumSize: const Size(380, 70),
+                ),
+                child: const Text(
+                  'Login',
                   style: TextStyle(
-                    fontSize: 17,
-                    color: Color(0xff6A707C),
+                    color: Colors.white,
+                    fontSize: 20,
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                minimumSize: Size(380, 70),
-              ),
-              child: Text(
-                'Login',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(),
+              const SizedBox(height: 40),
+              Row(
+                children: [
+                  Expanded(
                     child: Divider(
                       color: const Color(0xFFE8ECF4),
                       thickness: 3,
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Text(
-                    'Or Login With',
-                    style: TextStyle(color: Colors.black, fontSize: 17),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Text(
+                      'Or Login With',
+                      style: TextStyle(color: Colors.black, fontSize: 17),
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(),
+                  Expanded(
                     child: Divider(
                       color: const Color(0xFFE8ECF4),
                       thickness: 3,
                     ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
+                ],
+              ),
+              const SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
                     width: 100,
                     height: 60,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(7),
                         border: Border.all(
-                          color: Color(0xFFE8ECF4),
+                          color: const Color(0xFFE8ECF4),
                         )),
-                    child: Image.asset('assets/icon/imgc3.png')),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                    width: 100,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(7),
-                        border: Border.all(color: Color(0xFFE8ECF4))),
-                    child: Image.asset('assets/icon/imgc4.png')),
-                SizedBox(
-                  width: 20,
-                ),
-                Container(
-                    width: 100,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(7),
-                        border: Border.all(color: Color(0xFFE8ECF4))),
-                    child: Image.asset('assets/icon/imga4.png')),
-              ],
-            ),
-            SizedBox(
-              height: 170,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Don't have an account?",
-                  style: TextStyle(
-                    fontSize: 19,
-                    color: Color(0xff6f6f6f),
+                    child: Image.asset('assets/icon/imgc3.png'),
                   ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => (D03PageUI()),
-                      ),
-                    );
-                  },
-                  child: Text(
-                    'Register now',
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(7),
+                        border: Border.all(color: const Color(0xFFE8ECF4))),
+                    child: Image.asset('assets/icon/imgc4.png'),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(7),
+                        border: Border.all(color: const Color(0xFFE8ECF4))),
+                    child: Image.asset('assets/icon/imga4.png'),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 170),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Don't have an account?",
                     style: TextStyle(
                       fontSize: 19,
-                      color: Color(0xff35C2C1),
+                      color: Color(0xff6f6f6f),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const D03PageUI(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      'Register now',
+                      style: TextStyle(
+                        fontSize: 19,
+                        color: Color(0xff35C2C1),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

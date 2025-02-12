@@ -14,202 +14,207 @@ class _C02PageUIState extends State<C02PageUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: Column(
-        children: [
-          SizedBox(
-            height: 70,
-          ),
-          Container(
-            child: Image.asset(
-              'assets/images/imgc2.png',
-              width: 60,
-              height: 60,
-            ),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.green,
-                width: 3,
-              ),
-              borderRadius: BorderRadius.circular(15),
-            ),
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Text(
-            'Sign in your account',
-            style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: 0,
-          ),
-          SizedBox(
-            height: 80,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 290),
-            child: Text(
-              'Email',
-              style: TextStyle(color: Color(0xff6F6F6F), fontSize: 18),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 35, right: 35),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'ex: jon.smith@email.com',
-                hintStyle: TextStyle(
-                    color: Color.fromARGB(255, 182, 182, 182), fontSize: 20),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide.none,
-                ),
-                filled: true,
-                fillColor: Color(0xffFAFAFA),
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 25.0,
-                  horizontal: 20.0,
-                ),
-              ),
-              style: TextStyle(
-                color: Colors.black,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 248),
-            child: Text(
-              'Password',
-              style: TextStyle(color: Color(0xff6F6F6F), fontSize: 20),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 35, right: 35),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: '•••••••••',
-                hintStyle: TextStyle(
-                    color: Color.fromARGB(255, 182, 182, 182), fontSize: 18),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide.none,
-                ),
-                filled: true,
-                fillColor: Color(0xffFAFAFA),
-                contentPadding: EdgeInsets.symmetric(
-                  vertical: 25.0,
-                  horizontal: 20.0,
-                ),
-              ),
-              style: TextStyle(
-                color: Colors.black,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xff00B140),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              minimumSize: Size(365, 55),
-            ),
-            child: Text(
-              'SIGN IN',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 17,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            'or sign in with',
-            style: TextStyle(
-              fontSize: 19,
-              color: Color(0xff6f6f6f),
-            ),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
             children: [
               Container(
-                  width: 80,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(5),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.green,
+                    width: 3,
                   ),
-                  child: Image.asset('assets/icon/imgc3.png')),
-              SizedBox(
-                width: 20,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Image.asset(
+                  'assets/images/imgc2.png',
+                  width: MediaQuery.of(context).size.width * 0.15,
+                  height: MediaQuery.of(context).size.width * 0.15,
+                ),
               ),
-              Container(
-                  width: 80,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Image.asset('assets/icon/imgc4.png')),
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                  width: 80,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Image.asset('assets/icon/imgc5.png')),
-            ],
-          ),
-          SizedBox(
-            height: 35,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               Text(
-                "Don't have an account?",
+                'Sign in your account',
                 style: TextStyle(
-                  fontSize: 19,
+                  fontSize: MediaQuery.of(context).size.width * 0.08,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.08),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Email',
+                  style: TextStyle(
+                    color: Color(0xff6F6F6F),
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'ex: jon.smith@email.com',
+                  hintStyle: TextStyle(
+                    color: Color.fromARGB(255, 182, 182, 182),
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Color(0xffFAFAFA),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: MediaQuery.of(context).size.height * 0.03,
+                    horizontal: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                ),
+                style: TextStyle(color: Colors.black),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Password',
+                  style: TextStyle(
+                    color: Color(0xff6F6F6F),
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: '•••••••••',
+                  hintStyle: TextStyle(
+                    color: Color.fromARGB(255, 182, 182, 182),
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Color(0xffFAFAFA),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: MediaQuery.of(context).size.height * 0.03,
+                    horizontal: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                ),
+                style: TextStyle(color: Colors.black),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xff00B140),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  minimumSize: Size(
+                    MediaQuery.of(context).size.width * 0.9,
+                    MediaQuery.of(context).size.height * 0.07,
+                  ),
+                ),
+                child: Text(
+                  'SIGN IN',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              Text(
+                'or sign in with',
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.045,
                   color: Color(0xff6f6f6f),
                 ),
               ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => C03PageUI(),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.14,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(5),
                     ),
-                  );
-                },
-                child: Text(
-                  'SIGN UP',
-                  style: TextStyle(
-                    fontSize: 19,
-                    color: Color(0xff00B140),
+                    child: Image.asset(
+                      'assets/icon/imgc3.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.14,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Image.asset(
+                      'assets/icon/imgc4.png',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.14,
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: Image.asset(
+                      'assets/icon/imgc5.png',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Don't have an account?",
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width * 0.045,
+                      color: Color(0xff6f6f6f),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => C03PageUI(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'SIGN UP',
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.045,
+                        color: Color(0xff00B140),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-        ],
+        ),
       ),
-    ));
+    );
   }
 }

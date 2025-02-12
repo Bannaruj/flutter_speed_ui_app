@@ -14,107 +14,115 @@ class _B01PageUIState extends State<B01PageUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 90,
-            ),
-            Image(
-              image: AssetImage('assets/images/imgb1.png'),
-            ),
-            SizedBox(height: 40),
-            Text(
-              'Discover Your',
-              style: TextStyle(
-                fontSize: 37,
-                fontWeight: FontWeight.bold,
-                color: Color(0xff1F41BB),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 70,
               ),
-            ),
-            Text(
-              'Dream Job here',
-              style: TextStyle(
-                fontSize: 37,
-                fontWeight: FontWeight.bold,
-                color: Color(0xff1F41BB),
+              Image.asset(
+                'assets/images/imgb1.png',
+                height: MediaQuery.of(context).size.height * 0.3,
+                fit: BoxFit.contain,
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              Text(
+                'Discover Your',
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.08,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xff1F41BB),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'sed do eiusmod tempor incididunt ut',
+              ),
+              Text(
+                'Dream Job here',
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.08,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xff1F41BB),
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 80,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 20,
               ),
-              child: Row(
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => B02PageUI(),
-                        ),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 65, 6, 203),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      minimumSize: Size(200, 70),
-                    ),
-                    child: Text(
-                      'Log in',
-                      style: TextStyle(color: Colors.white, fontSize: 25),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => B03PageUI(),
-                        ),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 255, 255, 255),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      minimumSize: Size(200, 70),
-                    ),
-                    child: Text(
-                      'Register',
-                      style: TextStyle(color: Colors.black, fontSize: 25),
-                    ),
-                  ),
-                ],
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  'Explore all the existing job roles based on your interest and study major',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width * 0.045),
+                ),
               ),
-            )
-          ],
+              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => B02PageUI(),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 65, 6, 203),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          minimumSize: Size(
+                            MediaQuery.of(context).size.width * 0.45,
+                            MediaQuery.of(context).size.height * 0.07,
+                          ),
+                        ),
+                        child: Text(
+                          'Log in',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.05),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => B03PageUI(),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          minimumSize: Size(
+                            MediaQuery.of(context).size.width * 0.45,
+                            MediaQuery.of(context).size.height * 0.07,
+                          ),
+                        ),
+                        child: Text(
+                          'Register',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.05),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
